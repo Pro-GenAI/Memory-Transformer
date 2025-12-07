@@ -1,28 +1,23 @@
 # Memory Transformer: Neural Memory Storage for Textual Data
 
-Memory Transformer is a compact, practical library for storing and retrieving
-textual memories directly inside small neural modules — no external vector DB
-required. It brings transformer-inspired encoders together with trainable
-memory slots so applications can write, query, and manage memories using
-pure PyTorch objects.
+Memory Transformer is a compact, practical library for storing and retrieving textual memories directly
+inside small neural modules — no external vector DB required. It brings transformer-inspired
+encoders together with trainable memory slots so applications can write, query, and manage memories
+using pure PyTorch objects.
 
 ### Why it matters
 - Store memory signals in neural weights for tight, offline retrieval.
 - Lightweight: designed to run locally without cloud embedding services.
-- Flexible: supports a char-level transformer encoder (`MemoryTransformer`) and
-    a conv-based neural memory (`HierarchicalMemoryModel`) for different
-    trade-offs of speed and accuracy.
+- Flexible: supports a char-level transformer encoder (`MemoryTransformer`) and a conv-based 
+    neural memory (`HierarchicalMemoryModel`) for different trade-offs of speed and accuracy.
 
 ### Key features
-- Write memories by optimizing trainable memory slots to match an encoded
-    representation of the text.
-- Query by cosine similarity with optional token-overlap boosts and
-    synaptic-strength weighting.
-- Neurogenesis: grow memory capacity automatically when banks fill up.
-- Save and load full model state (weights + human-readable metadata) via
-    PyTorch serialization.
-- Simple REST API wrapper included (`mem_t/mem0_server.py`) for quick service
-    deployment.
+- __Neurogenesis__: create new neurons to grow memory capacity automatically when banks fill up.
+- Write memories by optimizing trainable memory slots to match an encoded representation of the text.
+- Query by cosine similarity with optional token-overlap boosts and synaptic-strength weighting.
+- Save and load full model state (weights + human-readable metadata) via PyTorch serialization.
+- Simple REST API wrapper included (`mem_t/mem0_server.py`) for quick service deployment.
+- Compatible with mem0 to switch from mem0-compatible projects.
 
 ### Quick start
 1) Create and activate a virtual environment (recommended):
