@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neuro-mem"
+version = "0.1.0"
+description = "A neural network-based memory model inspired by human brain storage mechanisms"
+authors = [
+    {name = "Praneeth Vadlapati", email = "praneeth.vad@gmail.com"},
+]
+readme = "README.md"
+license = {file = "LICENSE.md"}
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+	"Programming Language :: Python :: 3.12",
+	"Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "torch",
+    "einops",
+    "tqdm",
+    "pydantic",
+    "huggingface_hub",
+    "flash-attn",
+    "sentence-transformers",
+    "openai",
+    "packaging",
+    "ninja",
+    "wheel",
+    "setuptools",
+    "setuptools-scm",
+    "openai-python-cache @ git+https://github.com/Pro-GenAI/openai-python-cache.git",
+	# newly installed - uninstall after finishing this project
+    "adam-atan2",
+    "coolname",
+    "argdantic",
+    "wandb",
+    "omegaconf",
+    "hydra-core",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "flake8",
+]
+
+[tool.setuptools]
+packages = ["mem_t"]
