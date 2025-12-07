@@ -6,6 +6,7 @@ unused/
 TODO.md
 results/
 openai_cache*.db
+*.docx*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
